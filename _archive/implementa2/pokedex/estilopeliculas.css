@@ -1,0 +1,45 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+body{
+    background-color: black; 
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    color: aliceblue;
+                                                                        font-family: 'JUMBOTRON', sans-serif;
+                                                
+}
+form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+input[ type="text"]{
+font-size: 15px;
+padding: 10px;
+border-radius: 5px;
+border: solid red;
+width: 200px;
+}
+input[type="submit"]{
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: double red;
+    cursor: pointer;
+    background-color: beige;
+}
+input[type="submit"]:hover{
+    background-color: brown;
+    color: white;
+}
+h3{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: center;
+}

@@ -1,0 +1,341 @@
+body {
+    background-color: #f00144;
+}
+
+h1 {
+    font-family: 'Zachary', sans-serif;
+    color: #2E0A16;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #6C427A;
+    border: none;
+}
+
+.navbar-brand,
+.navbar-nav>li>a {
+    color: black !important;
+    font-family: 'Zachary', sans-serif;
+}
+
+.dropdown-menu>li>a {
+    color: black;
+}
+
+/* Utils para modulos */
+.module-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+.module-title {
+    color: #00ffcc;
+    font-family: 'Zachary', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilos Premium Autos */
+.auto-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px;
+    background: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.auto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.auto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.auto-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px 15px 10px 15px;
+}
+
+.auto-title {
+    margin: 0;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.auto-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.auto-card:hover .auto-hover {
+    opacity: 1;
+}
+
+.auto-details {
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ==========================================================================
+   ESTILO ANTIGRAVITY - MÓDULO DE AUTOS
+   ========================================================================== */
+.antigravity-module {
+    --bg-space: #0a0f14;
+    --glass-bg: rgba(20, 28, 38, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f1f5f9;
+    --text-muted: #64748b;
+    --glow-cyan: #06b6d4;
+    --shadow-drop: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+
+    background-color: var(--bg-space);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 3rem 0;
+}
+
+.container-gravity {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero con efecto de levitación */
+.antigravity-module .hero-floating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1.5rem 4rem;
+}
+
+.antigravity-module .hero-blur-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-10px);
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.antigravity-module .badge-float {
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: var(--glow-cyan);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.antigravity-module .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    margin: 1.5rem 0 1rem;
+    letter-spacing: -1px;
+}
+
+.antigravity-module .levitate-text {
+    color: var(--glow-cyan);
+    text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Barra de filtros de cristal */
+.antigravity-module .filter-blur-bar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 0.5rem;
+    border-radius: 16px;
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.antigravity-module .filter-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.antigravity-module .filter-btn.active,
+.antigravity-module .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid y tarjetas flotantes (Antigravity) */
+.antigravity-module .cars-gravity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.antigravity-module .gravity-card {
+    perspective: 1000px;
+}
+
+.antigravity-module .card-inner {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-drop);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.5s ease,
+        border-color 0.3s ease;
+}
+
+/* Efecto de suspensión al pasar el cursor */
+.antigravity-module .gravity-card:hover .card-inner {
+    transform: translateY(-18px) rotateX(4px) rotateY(-2px);
+    box-shadow: 0 45px 90px -20px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.4);
+}
+
+.antigravity-module .image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.antigravity-module .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.antigravity-module .gravity-card:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+.antigravity-module .floating-tag {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(10, 15, 20, 0.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--glass-border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.antigravity-module .card-info {
+    padding: 1.5rem;
+}
+
+.antigravity-module .card-header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.antigravity-module .car-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.antigravity-module .car-year-badge {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.antigravity-module .spec-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.antigravity-module .card-footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.antigravity-module .car-price-tag {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.antigravity-module .action-float-btn {
+    background: var(--text-main);
+    color: var(--bg-space);
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.antigravity-module .action-float-btn:hover {
+    background: var(--glow-cyan);
+    color: #000;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+/* Animaciones */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(-22px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}

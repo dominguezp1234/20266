@@ -1,0 +1,136 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.movies-module {
+    background-color: black; 
+    color: aliceblue;
+    padding-bottom: 50px;
+}
+.movies-module h1{
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    color: aliceblue;
+    font-family: 'JUMBOTRON', sans-serif;                                      
+}
+.movies-module form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.movies-module input[type="text"]{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid red;
+    width: 200px;
+    color: black;
+}
+.movies-module input[type="submit"]{
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: double red;
+    cursor: pointer;
+    background-color: beige;
+    color: black;
+}
+.movies-module input[type="submit"]:hover{
+    background-color: brown;
+    color: white;
+}
+.movies-module h3{
+    font-size: 20px;
+    color: blanchedalmond;
+    text-align: center;
+}
+.movies-grid {
+    /* Eliminado porque usaremos .row de Bootstrap */
+}
+
+.movie-card {
+    background: #0a0a0a; /* Fondo oscuro sólido en la base */
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Efecto pop al hacer hover */
+}
+
+.movie-image-container {
+    position: relative;
+    width: 100%;
+    flex-grow: 1; /* Permite que la imagen ocupe el espacio principal */
+}
+
+.movie-image-container img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block; /* Quita el margen inferior por defecto de las imágenes */
+}
+
+/* Efecto Hover Overlay */
+.movie-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Oscuro semitransparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculto por defecto */
+    transition: all 0.4s ease-in-out;
+}
+
+.movie-card:hover .movie-hover {
+    opacity: 1; /* Aparece al hacer hover en la tarjeta */
+}
+
+.movie-star {
+    font-size: 3rem;
+    color: #ffcc00; /* Estrella amarilla brillante */
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Brillo */
+}
+
+.movie-rating {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Detalles inferiores */
+.movie-info {
+    padding: 12px 10px;
+    background: #111; /* Fondo oscuro ligeramente texturizado/sólido para contraste */
+    flex-shrink: 0;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Puntos suspensivos si el título es largo */
+}
+
+.movie-date {
+    font-size: 0.85rem;
+    color: #d4af37; /* Tono dorado tenue / gris claro */
+    margin-top: 5px;
+    margin-bottom: 0;
+}

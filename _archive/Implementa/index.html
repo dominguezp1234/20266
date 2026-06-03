@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Primera página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Fuente -->
+    <link href="https://fonts.cdnfonts.com/css/zachary" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:#f00144;
+        }
+        h1{
+            font-family: 'Zachary', sans-serif;
+            color: #2E0A16;
+            text-align: center;
+        }
+        .navbar{
+            background-color: #6C427A;
+            border: none;
+        }
+        .navbar-brand,
+        .navbar-nav > li > a{
+            color: black !important;
+            font-family: 'Zachary', sans-serif;
+        }
+        .dropdown-menu > li > a{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Inicio</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Unidad 1 <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mostrar.php">Mostrar Datos</a></li>
+            <li><a class="dropdown-item" href="meterdatos01.php">Meter Datos</a></li>
+           
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Unidad 2 <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="relaciones01.php">Relaciones 1</a></li>
+            <li><a class="dropdown-item" href="relaciones2.php">Relaciones 2</a></li>
+            <li><a class="dropdown-item" href="capturadedatosrelacionados.php">Captura de Datos</a></li>
+            <li><a class="dropdown-item" href="insertar_datos.php">Inserta Datos</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Unidad 1 <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Calculadora</a></li>
+            <li><a class="dropdown-item" href="#">Tienda parte 1</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- JUMBOTRON -->
+<div class="container">
+  <div class="jumbotron">
+    <h1>Bienvenidos</h1>
+    <p class="lead">
+      This is a simple hero unit, a simple jumbotron-style component.
+    </p>
+    <hr>
+    <p>
+      It uses utility classes for typography and spacing.
+    </p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

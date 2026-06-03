@@ -1,0 +1,111 @@
+/* Pokedex Base Styles */
+.pokedex-container {
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+}
+
+.pokedex-search {
+    margin-bottom: 30px;
+}
+
+.pokedex-search input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid #333;
+    background: #111;
+    color: white;
+    width: 250px;
+}
+
+.pokedex-search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: #00aaf7;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pokedex-search button:hover {
+    background-color: #0088cc;
+}
+
+/* Pokemon Card with Neon Glow */
+.pokemon-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+    /* Default neon glow (overridden in JS based on type) */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+}
+
+.pokemon-img-container {
+    background: #2a2a2a;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #333;
+    transition: all 0.3s ease;
+}
+
+.pokemon-img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.pokemon-info {
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    margin-top: 15px;
+}
+
+.pokemon-name {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.pokemon-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.pokemon-stat:last-child {
+    border-bottom: none;
+}
+
+.pokemon-type-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto 15px auto;
+}

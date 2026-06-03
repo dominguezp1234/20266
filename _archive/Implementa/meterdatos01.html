@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meter Datos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Fuente -->
+  <link href="https://fonts.cdnfonts.com/css/zachary" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-de-fondo: #BFDBF7;
+      --color-de-letras: #053C5E;
+      --color-de-barra: #A31621;
+      --color-de-botones: #1F7A8C;
+      --color-extra: #DB222A;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--color-de-letras);
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      color: var(--color-extra);
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    form {
+      width: 50%;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid yellow;
+      border-radius: 5px;
+      background-color: #1f1f1f;
+      color: white;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: yellow;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('batman_01.jpg') center/cover no-repeat;
+      opacity: 0.3;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 95%;
+      background-color: white;
+      margin: 20px auto;
+      color: #333;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: left;
+    }
+
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .biografia {
+      font-style: italic;
+      color: #555;
+      max-width: 200px;
+    }
+
+    .navbar {
+      background: #111;
+      border: none;
+    }
+
+    .navbar-brand,
+    .navbar-nav>li>a {
+      color: white !important;
+    }
+
+    .dropdown-menu {
+      background: #222;
+    }
+
+    .dropdown-menu>li>a {
+      color: white;
+    }
+
+    .dropdown-menu>li>a:hover {
+      background: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR NUEVO -->
+  <nav class="navbar navbar-default">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../../index.html">
+          Inicio
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav">
+
+          <!-- PARCIAL 1 -->
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 1 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="meterdatos01.html">
+                  Meter Datos
+                </a>
+              </li>
+
+              <li>
+                <a href="mostrar.html">
+                  Mostrar Datos
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <!-- PARCIAL 2 -->
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 2 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="relaciones01.html">
+                  Relaciones 1
+                </a>
+              </li>
+
+              <li>
+                <a href="relaciones2.html">
+                  Relaciones 2
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <!-- PARCIAL 3 -->
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 3 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="../../index.html#pokedex">
+                  Pokedex
+                </a>
+              </li>
+
+              <li>
+                <a href="../../index.html#peliculas">
+                  Películas
+                </a>
+              </li>
+
+              <li>
+                <a href="../../index.html#autos">
+                  Autos
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <h1>
+    Registro de tabla
+  </h1>
+
+  <form>
+
+    <label>Nombre Real:</label>
+    <input type="text" name="nombrereal" required>
+
+    <label>Alias (Personaje):</label>
+    <input type="text" name="personaje" required>
+
+    <label>Altura (cm):</label>
+    <input type="text" name="altura" required>
+
+    <label>Peso (kg):</label>
+    <input type="text" name="peso" required>
+
+    <label>Superpoderes:</label>
+    <input type="text" name="poderes" required>
+
+    <label>Debilidad:</label>
+    <input type="text" name="debilidad" required>
+
+    <label>Sexo:</label>
+    <input type="text" name="sexo" required>
+
+    <label>Fecha de Creación:</label>
+    <input type="date" name="creacion" required>
+
+    <label>Biografía:</label>
+    <textarea name="biografia" required></textarea>
+
+    <input type="submit" value="Guardar Personaje">
+
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/* Estilos con paleta de colores moderna y limpia */
+
+body {
+    /* Un fondo gris muy suave para que el contenedor resalte */
+    background-color: #f0f2f5; 
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    /* Color de fondo blanco puro para que se vea limpio */
+    background-color: #ffffff; 
+    border-radius: 12px;
+    /* Sombra más profunda para dar efecto de elevación */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    border-top: 5px solid #007bff; /* Una línea azul arriba para darle estilo */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex: 0 0 220px; 
+    font-weight: 600;
+    /* Color gris oscuro azulado para las etiquetas */
+    color: #2c3e50; 
+    font-size: 14px;
+}
+
+.form-group input[type="text"] {
+    flex: 1; 
+    padding: 12px 15px;
+    /* Borde suave */
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group.file-group {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.form-group.file-group label {
+    margin-bottom: 10px;
+}
+
+.form-group input[type="file"] {
+    font-size: 14px;
+    color: #7f8c8d;
+    padding: 10px;
+    background: #f1f2f6;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    padding: 12px 30px;
+    /* Azul brillante profesional */
+    background-color: #007bff; 
+    /* Texto blanco para que se lea perfectamente */
+    color: #ffffff; 
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}

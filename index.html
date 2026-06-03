@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Dinámico - SPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.cdnfonts.com/css/zachary" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/jumbotron" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/estilopeliculas.css">
+  <link rel="stylesheet" href="css/pokedex.css">
+  <link rel="stylesheet" href="css/autoverse.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      background: #f00144;
+    }
+
+    .navbar {
+      background: #f5f5f5;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand,
+    .navbar-nav>li>a {
+      font-family: 'Zachary', sans-serif;
+      color: #2E0A16 !important;
+      font-size: 18px;
+    }
+
+    .dropdown-menu>li>a {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu>li>a:hover {
+      background: #f00144;
+      color: white;
+    }
+
+    .jumbotron {
+      background: rgba(255, 255, 255, 0.75) !important;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .jumbotron h1 {
+      font-family: 'Jumbotron', sans-serif;
+      color: #2E0A16;
+    }
+
+    .lead {
+      color: black !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR NUEVO -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#" id="link-inicio">
+          Inicio
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav">
+
+          <!-- PARCIAL 1 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 1 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="./_archive/Implementa/meterdatos01.html">
+                  Meter Datos
+                </a>
+              </li>
+
+              <li>
+                <a href="./_archive/Implementa/mostrar.html">
+                  Mostrar Datos
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <!-- PARCIAL 2 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 2 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="./_archive/Implementa/relaciones01.html">
+                  Relaciones 1
+                </a>
+              </li>
+
+              <li>
+                <a href="./_archive/Implementa/relaciones2.html">
+                  Relaciones 2
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <!-- PARCIAL 3 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Parcial 3 <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="#" id="link-pokedex">
+                  Pokedex
+                </a>
+              </li>
+
+              <li>
+                <a href="#" id="link-peliculas">
+                  Películas
+                </a>
+              </li>
+
+              <li>
+                <a href="#" id="link-autos">
+                  Autos
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR SPA -->
+  <div id="dinamic-content" class="container">
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/modulos_antiguos.js"></script>
+  <script src="js/equipos.js"></script>
+  <script src="js/autos.js"></script>
+  <script src="js/pokedex.js"></script>
+  <script src="js/peliculas.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registro Nike vs Adidas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<link href="https://fonts.cdnfonts.com/css/zachary" rel="stylesheet">
+
+<style>
+
+body{
+background:#111;
+color:white;
+padding:20px;
+}
+
+h1{
+text-align:center;
+color:#00ffcc;
+}
+
+form{
+width:50%;
+margin:auto;
+background:#222;
+padding:20px;
+border-radius:10px;
+}
+
+input{
+width:100%;
+margin-bottom:15px;
+padding:10px;
+border-radius:5px;
+border:1px solid yellow;
+background:#000;
+color:white;
+}
+
+input[type="submit"]{
+background:yellow;
+color:black;
+font-weight:bold;
+}
+
+table{
+width:90%;
+margin:auto;
+background:white;
+color:black;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+th{
+background:#3498db;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+<div class="container">
+
+<div class="navbar-header">
+<a class="navbar-brand" href="index.html">Inicio</a>
+</div>
+
+<ul class="nav navbar-nav">
+<li><a href="meterdatos001.php">Meter Datos</a></li>
+<li><a href="mostrar.php">Mostrar</a></li>
+</ul>
+
+</div>
+</nav>
+
+<h1>Registro de Clientes Nike vs Adidas</h1>
+
+<form method="POST">
+
+<label>Nombre Cliente</label>
+<input type="text" name="nombre" required>
+
+<label>Edad</label>
+<input type="number" name="edad" required>
+
+<input type="submit" value="Guardar Cliente">
+
+</form>
+
+<?php
+
+$server="localhost";
+$user="root";
+$password="";
+$database="implementa009";
+
+$conexion=new mysqli($server,$user,$password,$database);
+
+if($conexion->connect_error){
+die("Error de conexión");
+}
+
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+$nombre=$_POST['nombre'];
+$edad=$_POST['edad'];
+
+$sql="INSERT INTO clientes(nombre,edad)
+VALUES('$nombre','$edad')";
+
+if($conexion->query($sql)==TRUE){
+echo "<h3 style='text-align:center;color:lime;'>Cliente guardado correctamente</h3>";
+}else{
+echo "Error: ".$conexion->error;
+}
+}
+
+$sql_mostrar="SELECT * FROM clientes";
+$resultado=$conexion->query($sql_mostrar);
+
+if($resultado->num_rows>0){
+
+echo "<table>";
+echo "<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Edad</th>
+</tr>";
+
+while($fila=$resultado->fetch_assoc()){
+
+echo "<tr>";
+echo "<td>".$fila['id_cliente']."</td>";
+echo "<td>".$fila['nombre']."</td>";
+echo "<td>".$fila['edad']."</td>";
+echo "</tr>";
+
+}
+
+echo "</table>";
+
+}else{
+echo "<p style='text-align:center;'>No hay registros</p>";
+}
+
+$conexion->close();
+
+?>
+
+</body>
+</html>

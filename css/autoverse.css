@@ -1,0 +1,588 @@
+
+/* Reset y Base */
+.autoverse-module * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.autoverse-module {
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a2029;
+  --bg-card: #1e252f;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #06b6d4;
+  --accent-hover: #22d3ee;
+  --border: #2d3748;
+  --sports: #ef4444;
+  --electric: #22c55e;
+  --suv: #f59e0b;
+  --gt: #8b5cf6;
+}
+
+.autoverse-module {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.autoverse-module a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.autoverse-module img {
+  max-width: 100%;
+  display: block;
+}
+
+.autoverse-module .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.autoverse-module .header {
+  position: relative; /* CHANGED FROM FIXED TO AVOID OVERLAP WITH SPA NAVBAR */
+  background: rgba(15, 20, 25, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.autoverse-module .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.autoverse-module .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.autoverse-module .logo-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+}
+
+.autoverse-module .nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.autoverse-module .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.autoverse-module .nav-link:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.autoverse-module .hero {
+  padding: 4rem 1.5rem 4rem; /* REDUCED TOP PADDING */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.autoverse-module .hero-content {
+  text-align: center;
+}
+
+.autoverse-module .hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.autoverse-module .hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.autoverse-module .highlight {
+  color: var(--accent);
+}
+
+.autoverse-module .hero-description {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.autoverse-module .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.autoverse-module .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.autoverse-module .btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.autoverse-module .btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.autoverse-module .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.autoverse-module .btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.autoverse-module .hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.autoverse-module .stat {
+  text-align: center;
+}
+
+.autoverse-module .stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.autoverse-module .stat-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* API Info */
+.autoverse-module .api-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.autoverse-module .api-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.autoverse-module .api-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.autoverse-module .api-endpoint {
+  background: var(--bg-card);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
+/* Categories */
+.autoverse-module .categories {
+  padding: 4rem 0;
+}
+
+.autoverse-module .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.autoverse-module .section-subtitle {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.autoverse-module .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.autoverse-module .category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.autoverse-module .category-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.autoverse-module .category-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  background: rgba(6, 182, 212, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.autoverse-module .category-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.autoverse-module .category-icon.autoverse-module .electric {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.autoverse-module .category-icon.autoverse-module .electric svg {
+  color: var(--electric);
+}
+
+.autoverse-module .category-icon.autoverse-module .suv {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.autoverse-module .category-icon.autoverse-module .suv svg {
+  color: var(--suv);
+}
+
+.autoverse-module .category-icon.autoverse-module .gt {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.autoverse-module .category-icon.autoverse-module .gt svg {
+  color: var(--gt);
+}
+
+.autoverse-module .category-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.autoverse-module .category-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Catalog */
+.autoverse-module .catalog {
+  padding: 4rem 0;
+  background: var(--bg-secondary);
+}
+
+.autoverse-module .cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Car Card */
+.autoverse-module .car-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.autoverse-module .car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
+}
+
+.autoverse-module .car-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.autoverse-module .car-image .autoverse-module img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.autoverse-module .car-card:hover .autoverse-module .car-image .autoverse-module img {
+  transform: scale(1.1);
+}
+
+.autoverse-module .car-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.autoverse-module .car-badge.autoverse-module .sports {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+}
+
+.autoverse-module .car-badge.autoverse-module .electric {
+  background: rgba(34, 197, 94, 0.9);
+  color: white;
+}
+
+.autoverse-module .car-badge.autoverse-module .suv {
+  background: rgba(245, 158, 11, 0.9);
+  color: white;
+}
+
+.autoverse-module .car-badge.autoverse-module .gt {
+  background: rgba(139, 92, 246, 0.9);
+  color: white;
+}
+
+.autoverse-module .car-content {
+  padding: 1.25rem;
+}
+
+.autoverse-module .car-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.autoverse-module .car-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.autoverse-module .car-year {
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.autoverse-module .car-specs {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.autoverse-module .spec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.autoverse-module .spec svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+.autoverse-module .spec span {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.autoverse-module .car-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.autoverse-module .car-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.autoverse-module .btn-details {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.autoverse-module .btn-details:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* Contact Section */
+.autoverse-module .contact {
+  padding: 4rem 0;
+}
+
+.autoverse-module .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.autoverse-module .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.autoverse-module .contact-item svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+/* Footer */
+.autoverse-module .footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 1.5rem;
+}
+
+.autoverse-module .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.autoverse-module .footer-brand {
+  margin-bottom: 2rem;
+}
+
+.autoverse-module .footer-brand .autoverse-module .logo {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.autoverse-module .footer-brand p {
+  color: var(--text-secondary);
+}
+
+.autoverse-module .footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.autoverse-module .footer-bottom p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .autoverse-module .nav {
+    display: none;
+  }
+  
+  .autoverse-module .hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .autoverse-module .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .autoverse-module .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .autoverse-module .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .autoverse-module .btn {
+    width: 100%;
+  }
+  
+  .autoverse-module .car-specs {
+    gap: 0.5rem;
+  }
+}
