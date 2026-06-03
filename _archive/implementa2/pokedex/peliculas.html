@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UFT-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.cdnfonts.com/css/jumbotron" rel="stylesheet">
-                
+    <link href="https://fonts.cdnfonts.com/css/jumbotron" rel="stylesheet">
 
-<link rel="stylesheet" href="estilopeliculas.css">
-<tittle>Document</tittle>
+
+    <link rel="stylesheet" href="estilopeliculas.css">
+    <tittle>Luis Fernando Dominguez Peralta</tittle>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Pagina de Peliculas</h1>
-    <h3>Luis Fernando Dominguez Peralta</h3>
-<form id="form">
-<input type="text" id="search" placeholder="Shrek..">
-<input type="submit" value="Buscar">
-</form>
-<section id="main" class="movies"></section>
-</div>
+    <div class="container">
+        <h1>Pagina de Peliculas</h1>
+        <h3>Luis Fernando Dominguez Peralta</h3>
+        <form id="form">
+            <input type="text" id="search" placeholder="Shrek..">
+            <input type="submit" value="Buscar">
+        </form>
+        <section id="main" class="movies"></section>
+    </div>
 
-<script>
-    //En esta línea se define la URL de la API para obtener la lista de películas.
-const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';
-//Esta línea define la URL de la API para obtener las imágenes de las películas.
-const IMG_PATH = 'https://image.tmdb.org/t/p/w1280&#39';
-//En esta línea se define la URL de la API para buscar películas.
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+    <script>
+        //En esta línea se define la URL de la API para obtener la lista de películas.
+        const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';
+        //Esta línea define la URL de la API para obtener las imágenes de las películas.
+        const IMG_PATH = 'https://image.tmdb.org/t/p/w1280&#39';
+        //En esta línea se define la URL de la API para buscar películas.
+        const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
 
-const main = document.getElementsById('main')
-const form = document.getElementsById('form')
-const search = document.getElementById('search')
+        const main = document.getElementsById('main')
+        const form = document.getElementsById('form')
+        const search = document.getElementById('search')
 
-getMovie(API_URL)
-async function getMovie(url) {
-    const res = await fetch(url);
-    const data = await fetch.json();
-    showMovies(data.results);
-}
-//Esta funcion crea los elementos del HTML para mostrar cada pelicula en la lista.
-function showMovies(movies){
-    main.innerHTML = '';
-    movies.forEach ((movie) => {
-        const {tittle, poster_patch, vote_average, overview, release_database} = movie;
-        const movieEl = document.createElement('div');
+        getMovie(API_URL)
+        async function getMovie(url) {
+            const res = await fetch(url);
+            const data = await fetch.json();
+            showMovies(data.results);
+        }
+        //Esta funcion crea los elementos del HTML para mostrar cada pelicula en la lista.
+        function showMovies(movies) {
+            main.innerHTML = '';
+            movies.forEach((movie) => {
+                const { tittle, poster_patch, vote_average, overview, release_database } = movie;
+                const movieEl = document.createElement('div');
 
-        movieEl.classList.add('movie');
-        movieEl.innerHTML = `
+                movieEl.classList.add('movie');
+                movieEl.innerHTML = `
         <img src ="${IMG_PATH + poster_path}" alt="{title}">
         <div class="movie-info">
             <h3>${title}</h3>
@@ -61,25 +63,26 @@ function showMovies(movies){
                     <h3>Release Date</h3>
                     ${release_data}</div>
                     `
-                    main.appendChild(movieEl);
-                })
+                main.appendChild(movieEl);
+            })
+        }
+        function getClassByRate(vote) {
+            if (vote >= 8) {
+                return 'green'
+            } else if (vote >= 5) {
+                return 'orange'
+            } else { return 'red' }
+        }
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchTerm = search.value
+            if (searchTerm && searchTerm !== '') {
+                getMovie(SEARCH_API + searchTerm)
+            } else {
+                window.location.reload();
             }
-            function getClassByRate(vote){
-                if(vote>=8){
-                    return 'green'
-                }else if (vote >=5){
-                    return 'orange'
-                }else {return 'red'}
-            }
-            form.addEventListener('submit', (e) =>{
-                e.preventDefault();
-                const searchTerm = search.value 
-                if(searchTerm && searchTerm !== ''){
-                    getMovie(SEARCH_API +  searchTerm)
-                }else{
-                    window.location.reload();
-                }
-            });
-</script>
+        });
+    </script>
 </body>
+
 </html>
